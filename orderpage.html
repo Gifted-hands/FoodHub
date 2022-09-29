@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Order Page</title>
+</head>
+
+<body>
+
+    <div class="container-fluid form-container">
+
+        <form class="row g-3" method="post" action="payment.html" name="Order form">
+
+
+
+
+
+            <h3 class="title">Order Now</h3>
+
+            <div class="col-md-6">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Emeka Duke">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <div class="input-group">
+                    <div class="input-group-text">+234</div>
+                    <input type="text" class="form-control" id="number" placeholder="09039544017">
+                </div>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Your Order</label>
+                <input type="text" class="form-control" id="order" placeholder="Egusi Soup">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Additional food</label>
+                <input type="text" class="form-control" id="order" placeholder="Chicken Pie">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="order" placeholder="1">
+            </div>
+            <div class="col-12">
+                <label class="form-label">Date and Time</label>
+                <input type="datetime-local" class="form-control" id="order">
+            </div>
+            <div class="col-12">
+                <label class="form-label">Delivery Location</label>
+                <input type="text" class="form-control" id="order" placeholder="62 Azikwe Rd Aba.">
+            </div>
+
+            <input type="submit" value="proceed to Payment" class="submit-btn">
+        </form>
+
+    </div>
+    <!-- loader part  -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+
+    <script>
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 3000);
+        }
+
+        window.onload = fadeOut;
+    </script>
+
+</body>
+
+</html>
